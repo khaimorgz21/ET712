@@ -2,7 +2,7 @@
 Homework 1: control flow and loops
 Student's name: Makhai Morgan
 */
-
+console.log("\n------ Program 1: conditional statement ------")
 // Ask the user to enter something
 let userinput = prompt("Please enter something:"));
 
