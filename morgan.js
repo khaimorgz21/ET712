@@ -79,3 +79,43 @@ for (let i = 0; i < numbers.length; i++) {
 console.log(`${count3} numbers are multiple of 3`);
 console.log(`${count5} numbers are multiple of 5`);
 console.log(`${count7} numbers are multiple of 7`);
+
+/*
+Homework 2 - functions, loops, and conditional statement
+Student's full name: Makhai Morgan
+*/
+
+// Exercise 1: name_counting function
+function name_counting(name){
+    let count = 0;
+    for (let name of names) {
+        if (name.length < 5) {
+          count++;
+        }
+    }
+    return count;
+}
+
+// Test the function
+let namesArray = ["David", "Elizabeth", "Patrick", "Elijah", "Andrew"];
+console.log("Number of names with less than 5 characters:", name_counting(namesArray));
+
+// Exercise 2: checkNum function
+function checkNum() {
+    let num;
+    while (true) {
+        num = prompt("Enter a number:");
+        if (num === null || num.trim() === "") {
+            alert("Please enter a valid number.");
+            continue;
+        }
+        num = Number(num);
+        if (!isNaN(num)) {
+            return num % 2 === 0;
+        }
+        alert("Invalid input. Please enter a number.");
+    }
+}
+
+// Test the function
+console.log("Is the number even?", checkNum());
