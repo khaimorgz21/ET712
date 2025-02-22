@@ -94,3 +94,44 @@ yell(8)
 console.log("end of example 8")
 
 console.log("\n------ EXERCISE --------")
+// Create an object named myCalculator
+let myCalculator = {
+    // Properties
+    message: "This is a calculator object",
+    side: 2,
+
+    // Method to calculate the area of a square
+    area_square: function() { side^2
+        return Math.pow(this.side, 2); //
+    },
+
+    // Method to calculate the volume of a cube
+    volume_cube: function() {
+        return Math.pow(this.side, 3); // side^3
+    }
+};
+
+// Example usage
+console.log(myCalculator.message); // "This is a calculator object"
+console.log("Area of square: " + myCalculator.area_square()); // 4
+console.log("Volume of cube: " + myCalculator.volume_cube()); // 8
+
+console.log("\n------ EXERCISE 2--------")
+// Define the function divideNumbers
+function divideNumbers(a, b) {
+    try {
+        // Check if b is 0 to avoid division by zero
+        if (b === 0) {
+            throw new Error("Division by zero is not allowed.");
+        }
+        // Perform division
+        return a / b;
+    }   catch (error) {
+        // Return error message if division fails
+        return "Error performing the division: " + error.message;  
+    }
+}
+
+// Example usage
+console.log(divideNumbers(63, 9)); // 7
+console.log(divideNumbers(100, 0)); // Error performing the division: Division by zero is not allowed.
