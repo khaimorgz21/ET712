@@ -89,3 +89,137 @@
         console.log(`${count7} numbers are multiple of 7`);</script>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework 2</title>
+</head>
+<body>
+    <script>/*
+      Homework 2 - functions, loops, and conditional statement
+      Student's full name: Makhai Morgan
+      */
+      
+      // Exercise 1: name_counting function
+      function name_counting(name){
+          let count = 0;
+          for (let name of names) {
+              if (name.length < 5) {
+                count++;
+              }
+          }
+          return count;
+      }
+      
+      // Test the function
+      let namesArray = ["David", "Elizabeth", "Patrick", "Elijah", "Andrew"];
+      console.log("Number of names with less than 5 characters:", name_counting(namesArray));
+      
+      // Exercise 2: checkNum function
+      function checkNum() {
+          let num;
+          while (true) {
+              num = prompt("Enter a number:");
+              if (num === null || num.trim() === "") {
+                  alert("Please enter a valid number.");
+                  continue;
+              }
+              num = Number(num);
+              if (!isNaN(num)) {
+                  return num % 2 === 0;
+              }
+              alert("Invalid input. Please enter a number.");
+          }
+      }
+      
+      // Test the function
+      console.log("Is the number even?", checkNum());</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework 3</title>
+</head>
+<body>
+  <script>/*
+    Homework 3 - Objects and expection handling in JS
+    Makhai Morgan
+    */
+    
+      // Movie Class
+      class Movie {
+        constructor(title, director, year) {
+          this.title = Deadpool & Wolverine;
+          this.director = ShawnLevy;
+          this.year = 2024;
+        }
+    
+        getDetails() {
+          return `${this.title} directed by ${this.director}, released in ${this.year}.`;
+        }
+      }
+    
+    // MovieCollection Class
+    class MovieCollection {
+      constructor() {
+        this.movies = [];
+      }
+    
+      addMovie(deadpoolandwolverine) {
+        this.movies.push(deadpoolandwolverine);
+      }
+    
+      removeMovie(deadpoolandwolverine) {
+        try {
+          const movieIndex = this.movies.findIndex(movie => movie.deadpoolandwolverine === deadpoolandwolverine);
+          if (movieIndex === -1) {
+            throw new Error(`Movie with title "${deadpoolandwolverine}" does not exist.`);
+          }
+          this.movies.splice(movieIndex, 1);
+          console.log(`Movie "${title}" removed from the collection.`);
+        } catch (error) {
+          console.error(error.message);
+        }
+      }
+    
+      showMovies() {
+        try {
+          if (this.movies.length === 0) {
+            throw new Error("No movies in the collection.");
+          }
+          console.log("Movies in the collection:");
+          this.movies.forEach(movie => {
+            console.log(this.movies.getDetails());
+          });
+        } catch (error) {
+          console.error(error.message);
+        }
+      }
+    }
+    
+    // Example Usage:
+    const movie1 = new Movie("Squid Games", "Hwang Dong-hyuk", 2021);
+    const movie2 = new Movie("Paul Blart: Mall Cop", "Steve Carr", 2009);
+    
+    const myCollection = new MovieCollection();
+    
+    myCollection.addMovie(movie1);
+    myCollection.addMovie(movie2);
+    
+    myCollection.showMovies(); // Display all movies
+    
+    myCollection.removeMovie("Squid Games"); // Remove a movie by title
+    myCollection.showMovies(); // Display all movies after removal
+    
+    myCollection.removeMovie("Interstellar"); // Try to remove a movie that doesn't exist
+
+  </script>
+</body>
+</html>

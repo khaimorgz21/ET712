@@ -119,3 +119,75 @@ function checkNum() {
 
 // Test the function
 console.log("Is the number even?", checkNum());
+
+/*
+Homework 3 - Objects and expection handling in JS
+Makhai Morgan
+*/
+
+  // Movie Class
+  class Movie {
+    constructor(title, director, year) {
+      this.title = Deadpool & Wolverine;
+      this.director = ShawnLevy;
+      this.year = 2024;
+    }
+
+    getDetails() {
+      return `${this.title} directed by ${this.director}, released in ${this.year}.`;
+    }
+  }
+
+// MovieCollection Class
+class MovieCollection {
+  constructor() {
+    this.movies = [];
+  }
+
+  addMovie(deadpoolandwolverine) {
+    this.movies.push(deadpoolandwolverine);
+  }
+
+  removeMovie(deadpoolandwolverine) {
+    try {
+      const movieIndex = this.movies.findIndex(movie => movie.deadpoolandwolverine === deadpoolandwolverine);
+      if (movieIndex === -1) {
+        throw new Error(`Movie with title "${deadpoolandwolverine}" does not exist.`);
+      }
+      this.movies.splice(movieIndex, 1);
+      console.log(`Movie "${title}" removed from the collection.`);
+    } catch (error) {
+      console.error(error.message);
+    }
+  }
+
+  showMovies() {
+    try {
+      if (this.movies.length === 0) {
+        throw new Error("No movies in the collection.");
+      }
+      console.log("Movies in the collection:");
+      this.movies.forEach(movie => {
+        console.log(this.movies.getDetails());
+      });
+    } catch (error) {
+      console.error(error.message);
+    }
+  }
+}
+
+// Example Usage:
+const movie1 = new Movie("Squid Games", "Hwang Dong-hyuk", 2021);
+const movie2 = new Movie("Paul Blart: Mall Cop", "Steve Carr", 2009);
+
+const myCollection = new MovieCollection();
+
+myCollection.addMovie(movie1);
+myCollection.addMovie(movie2);
+
+myCollection.showMovies(); // Display all movies
+
+myCollection.removeMovie("Squid Games"); // Remove a movie by title
+myCollection.showMovies(); // Display all movies after removal
+
+myCollection.removeMovie("Interstellar"); // Try to remove a movie that doesn't exist
