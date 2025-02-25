@@ -1,0 +1,31 @@
+*{box-sizing: border-box;} /*preserve the 100% width of the screen */
+img{width: 100%;}
+.header{
+    background-color: #0af257;
+    display: flex;
+}
+.logo{
+    width: 10%;
+    padding: 1em;
+}
+.title{
+    width: 50%;
+    text-align: center;
+    padding: 1em;
+    font-size: 2.5em;
+    color: black;
+    font-family: Blackadder ITC;
+}
+.quicklinks{
+    width: 20%;
+    font-size: 1.5em;
+    margin-left: auto;
+    display: flex;
+}
+.quicklins a{
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    padding: 1em;
+}
+/*NAVLINKS/*
