@@ -1,0 +1,112 @@
+/* example 1*/
+.btnpressme{
+    display: block;
+    padding: 1em 2em;
+    border-radius: 10px;
+    background-color: lightgray;
+}
+.btnactive{
+    background-color: orangered;
+    font-weight: bolder;
+}
+
+/* example 2*/
+#veggielist{
+    background-color: whitesmoke;
+}
+#veggielist li{
+    list-style: none;
+    border-bottom: 1px solid darkgoldenrod;
+    width: 200px;
+    padding: 1em 2em;
+    background-color: blueviolet;
+}
+#veggielist li:hover{
+    background-color: greenyellow;
+    color: antiquewhite;
+}
+
+/*example 4*/
+img{width: 100%; display: block;}
+.card{
+    width: 200px;
+}
+.linkreadmore{
+    display: block;
+    background-color: lightskyblue;
+    text-align: center;
+    text-decoration: none;
+    padding: 1em;
+}
+.linkreadmore:hover{
+    background-color: pink;
+}
+.modalwindow{
+    background-color: rgba(100,100,100, 0.6);
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    display: none;
+}
+.modalcontent{
+    width: 50%;
+    margin: 5% auto;
+    background-color: white;
+}
+.modalimg{
+    height: 200px;
+}
+.modalheader{
+    background-color: lightslategray;
+    display: flex;
+    padding: 0.5em;
+}
+.closex{
+    width: 10%;
+    display: block;
+    margin-left: auto;
+    font-size: 2em;
+    text-align: center;
+}
+.closex:hover{
+    color:crimson;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #3437eb;
+}
+
+.container {
+    text-align: center;
+}
+
+#circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #691c9c;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+#counter {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+#resetButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: aquamarine;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
