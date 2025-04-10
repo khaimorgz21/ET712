@@ -127,3 +127,26 @@ images.forEach(img => {
         aniamlInfo.textContent = infoText;
     });
 });
+
+const characterImage = document.getElementById('characterImage');
+const changeExpression = document.getElementById('changeExpression');
+
+let happy =true;
+
+changeExpression.addEventListener('click', () => {
+    if (happy) {
+       characterImage.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt9zMPQNlDSvBjejqR1yfoO2DAIwcwpkZ7bQ&s';
+       characterImage.alt = 'Best Cartoon Character';
+    } else {
+        characterImage.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjcn3czFo0b_0v2EVkq8wvjhWdVo1GcdB7jQ&s';
+        characterImage.alt = 'Greatest Show';
+    }
+    happy = !happy;
+});
+
+const images = [
+    {src: "https://media.timeout.com/images/105994113/750/562/image.jpg", alt: "A nice and sunny day at the park"},
+    {src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTfn1GQsvhBS1jlBDo4fVppBvMpKYpuLQaXQ&s", alt: "Enjoy the view at the beach"},
+    {src: ""}
+    {src: ""}
+];
