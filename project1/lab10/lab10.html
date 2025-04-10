@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 10, form events</title>
+    <link rel="stylesheet" href="lab10.css">
+</head>
+<body>
+    <form id="myform">
+<section class="formcontrol">
+    <label form="username">Username: </label>
+    <input type="text" id="username" name="username" placeholder="Enter username...">
+</section>
+
+<section class="formcontrol">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" placeholder="Enter password...">
+    <p class="errormsg">Password must be 8+ characters</p>
+</section>
+
+        <button type="submit" class="btnsubmit">Submit form</button>
+    </form>
+
+   <!-- Display a welcome message-->
+    <div class="greeting">
+      <p>Welcome to form event <span class="greetuser">testing</span> </p>
+    </div>
+
+    <script src="lab10.js"></script>
+</body>
+</html>
