@@ -147,6 +147,26 @@ changeExpression.addEventListener('click', () => {
 const images = [
     {src: "https://media.timeout.com/images/105994113/750/562/image.jpg", alt: "A nice and sunny day at the park"},
     {src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTfn1GQsvhBS1jlBDo4fVppBvMpKYpuLQaXQ&s", alt: "Enjoy the view at the beach"},
-    {src: ""}
-    {src: ""}
+    {src: "https://nationaltoday.com/wp-content/uploads/2022/01/Rivers-Day-1200x834.jpg", alt: "Beautiful view of the river"},
+    {src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw9B29knJ2p8-TFzZ_1j2OQtR_RbAMyqDALg&s" alt: "Nice Forest!"}
 ];
+
+let currentIndex = 0;
+const sliderImage = document.getElementById('sliderImage');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+prevBtn.addEventListener('click', () =>{
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateSlider();
+});
+
+nextBtn.addEventListener('click', () =>{
+    currentIndex = (currentIndex + 1) % images.length;
+    updateSlider();
+});
+
+function updateSlider() {
+    sliderImage.src = images[currentIndex].src;
+    sliderImage.alt = images[currentIndex].alt;
+}
