@@ -1,0 +1,27 @@
+/* navbars.js */
+.title{
+  color: pink;
+  text-align: center;
+  padding: 2%;
+}
+.navheader{
+  display: flex;
+  justify-content: center;
+}
+.iconlink{
+  width: 30%;
+  padding: 2%;
+}
+.navlinks{
+  width: 70%;
+  padding: 2%;
+  display: flex;
+  justify-content: end;
+  background-color: blue;
+}
+.tablink{
+  width: 30%;
+  border: none;
+  padding: 2%;
+  background-color: blue;
+}
