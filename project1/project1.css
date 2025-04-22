@@ -62,9 +62,10 @@ body {
     padding: 20px;
 }
 canvas {
-    border: 2px solid #000;
+    border: 2px solid #acf10b;
     margin-top: 20px;
     cursor: crosshair;
+    color: #540dd8;
 }
 
 body {
@@ -130,31 +131,51 @@ header {
     padding: 20px;
 }
 
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px;
-}
 
-.gallery-img {
-    border: 2px solid #ccc;
-    border-radius: 10px;
+/* ── adjustable knobs ─────────────────────────── */
+:root {
+    --thumb-size: 180px;   /* min width/height of a thumbnail cell */
+    --gap:        14px;    /* space between photos                 */
+    --radius:     10px;    /* border‑radius                        */
+  }
+  
+  /* ── gallery wrapper ──────────────────────────── */
+  .gallery {
+    display: grid;
+    gap: var(--gap);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  
+    /* create as many columns as fit, each ≥ --thumb-size */
+    grid-template-columns: repeat(auto-fill, minmax(var(--thumb-size), 1fr));
+  }
+  
+  /* ── thumbnail images ─────────────────────────── */
+  .gallery img {
+    width: 100%;            /* fill the cell */
+    aspect-ratio: 1 / 1;    /* perfect square box */
+    object-fit: cover;      /* crop edges, never distort */
+    border-radius: var(--radius);
     cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.gallery-img:hover {
-    transform: scale(1.1);
-}
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0,0,0,.25);
+  }
+  
 
 .animal-info {
     margin: 20px;
     font-size: 1.2em;
     color: black;
 }
-
+.info {
+    font: 600 1.1rem/1.4 system-ui, sans-serif;
+    text-align: center;
+}
 body {
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
@@ -197,20 +218,37 @@ header {
     border-radius: 10px;
 }
 
+:root {
+    --slide-w: 100%;     /* width of each slide */
+    --gap: 0;            /* space between slides if you want it */
+  }
+
 .slider {
+    position: relative;
+      overflow: hidden;           /* hide the off‑screen slides   */
+      max-width: 700px;           /* optional – your chosen width */
+      margin: auto;
+}
+
+.track {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
+    transition: transform .4s ease;
+    gap: var(--gap);
+    touch-action: pan-y; 
 }
 
-.slider img {
-    margin: 0 20px;
-    border: 3px solid navy;
-    border-radius: 10px;
+.slide {
+    flex: 0 0 var(--slide-w);   /* fixed width, no shrinking */
+     position: relative; 
+}
+.slide img {
+    display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
 }
 
-button {
+/*button {
     padding: 10px;
     font-size: 1em;
     background-color: #d402f5;
@@ -218,6 +256,19 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+*/
+.nav
+ { position:absolute; top:50%; transform:translateY(-50%);
+    background:rgba(0,0,0,.55); color:#fff; border:none;
+    padding:.5rem .9rem; font-size:1.4rem; cursor:pointer;
+    border-radius:50%; 
+}
+.prev
+ { left:12px;  
+}
+.next 
+{ right:12px; 
 }
 
 button:hover {

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Games and Fun Adventures</title>
     <link rel="stylesheet" href="project1.css">
+    <script src="project1.js" defer></script>
 </head>
 <body>
     <header>
@@ -15,51 +16,25 @@
         <button id="funButton">Click me!</button>
         <div id="funArea"></div>
     </main>
-    <script src="project1.js"></script>
-</body>
-</html>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lets hear a fun story</title>
-</head>
-<body>
+<header>
+    <h1>Lets read a fun story.</h1>
+</header>
    <div class="container">
-     <h1>Time for a fun trip!</h1>
      <p id="storyText">Once upon a time, there was a land that was far away from the earth, people from jugnleland have been discovering where to find this happyland for decades...</p>
      <button id="nextButton">Next</button>
    </div> 
-   <script src="story-script.js"></script>
-</body>
-</html>
+   
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coloring App!</title>
-</head>
-<body>
-    <h1>Draw a Picture</h1>
+    <header>
+        <h1>Draw a Picture.</h1>
+    </header>
     <canvas id="drawingCanvas" width="500" height="400"></canvas>
-    <script src="drawing-script.js"></script>
-</body>
-</html>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fun Quiz Game</title>
-</head>
-<body>
-    <div class="quiz-container">
-        <h1>Easy Quiz</h1>
+    <header>
+        <h1>Easy Quiz!</h1>
+    </header>
+    <div class="quiz-container"> 
         <p id="question">How many letters are in the Alphabet?</p>
         <div class="answers">
             <button class="answerBtn">26</button>
@@ -69,19 +44,10 @@
         </div>
         <p id="feedback"></p>
     </div>
-    <script src="quiz-script.js"></script>
-</body>
-</html>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Chnager</title>
-</head>
-<body>
-    <h1>Choose a Color!</h1>
+    <header>
+        <h1>Choose a Color!</h1>
+     </header>
     <div class="color-buttons">
         <button class="colorBtn" data-color="#0a0a0a">Black</button>
         <button class="colorBtn" data-color="#fffcfc">White</button>
@@ -90,71 +56,34 @@
         <button class="colorBtn" data-color="#211ca6">Blue</button>
         <button class="colorBtn" data-color="#fa2828">Red</button>
     </div>
-    <script src="color-script.js"></script>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Very Sick Animals</title>
-</head>
-<body>
     <header>
-        <h1>Animals Rock.</h1>
+        <h1>Animals Rock!</h1>
     </header>
     <main>
         <div class="gallery">
-          <img src="Gorilla.jpg"/>
-          <img src="Lion.jpg"/>
-          <img src="Giraffe.jpg"/>
-          <img src="Horse.jpg"/>
-          <img src="Tiger.jpg"/>
-          <img src="Elephant.jpg"/>
+          <img src="images/Gorilla.jpg"/>
+          <img src="images/Lion.jpg"/>
+          <img src="images/Giraffe.jpg"/>
+          <img src="images/Horse.jpg"/>
+          <img src="images/Tiger.jpg"/>
+          <img src="images/Elephant.jpg"/>
         </div>
         <div id="animalInfo" class="animal-info">Click an animal! Its fun to learn.</div>
     </main>
-    <script src="animal-gallery.js"></script>
-</body>
-</html>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cartoons</title>
-</head>
-<body>
-    <h1>Our Favorite Cartoon Characters</h1>
-    <div class="character-container">
-        <img id="spongebob.jpg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt9zMPQNlDSvBjejqR1yfoO2DAIwcwpkZ7bQ&s" alt="Best Cartoon Character">
-        <img id="regularshow.jpg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjcn3czFo0b_0v2EVkq8wvjhWdVo1GcdB7jQ&s" alt="Greatest Show">
-    </div>
-    <button id="changeExpression">Change Expression</button>
-    <script src="cartoon.js"></script>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Going on a Nature Adventure!</title>
-    <link rel="stylesheet" href="nature-slider.css">
-</head>
-<body>
-    <header>
+   
         <h1>Travel Through Nature!</h1>
     </header>
-    <div class="slider">
-        <button id="prevBtn">Prev</button>
-        <img id="Outdoors.jpg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKtKkuCjVMZ09HHU7OxCs0h7421BzTwVWGjA&s" alt="Nature Image">
-        <button id="nextBtn">Next</button>
+    <section class="slider" id="slider">
+        <button class="nav-btn prev" id="prev">Prev</button>
+        <button class="nav-btn next" id="next">Next</button>
+
+    <div class="track" id="track">
+        <div class="slide"><img src="images/Rivers.jpg" alt="Rivers"></div>
+        <div class="slide"><img src="images/Beaches.jpg" alt="Beaches"></div>
+        <div class="slide"><img src="images/Outdoors.jpg" alt="Outdoors"></div>
+        <div class="slide"><img src="images/Parks.jpg" alt="Parks"></div>
     </div>
-    <script src="nature-slider.js"></script>
+</section>
 </body>
 </html>
