@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
-import Card from "./components/Card";
-import products from "./data/products";
+import Card from "./card";
+//import products from "./data/products";
 import "./App.css";
 
 function CategoryPage({ title }) {
